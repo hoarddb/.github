@@ -1,0 +1,51 @@
+name: Bug report
+description: Something hoardDB did that you did not expect
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. **Security problems do not go here**: see the Security policy tab (private reporting) or the address in SECURITY.md.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: "Output of `hoarddb-server -v` (or the driver's version)."
+      placeholder: "hoarddb-server 0.0.0 (commit abc1234)"
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: What you ran
+      description: The exact statement, request or code, as short as you can make it. Paste it as text, not a screenshot.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+      description: The full error text or output, including any line that names a fix.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Setup
+      description: "OS, one node or a cluster (how many members, replication factor), and whether encryption is on."
+    validations:
+      required: false
+  - type: checkboxes
+    id: data
+    attributes:
+      label: Data
+      options:
+        - label: This report does not contain passwords, tokens, keys or private data.
+          required: true

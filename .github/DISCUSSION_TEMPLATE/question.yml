@@ -1,0 +1,16 @@
+title: "[Question] "
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to do?
+      description: "Say how you read the data (the access pattern) and which store types you are considering."
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried?
+      description: "Paste the exact statements and the output."
+    validations:
+      required: false
